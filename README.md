@@ -8,8 +8,7 @@ Zero-shot learning is a type of machine learning where instead of giving trainin
 
 Let's say you are looking for a certain category or specific type, such as traveling or cooking. You can create a list that contain the categories you want to look for, then the model will search through the texts to determine which category is the most likely of the ones you've chosen.
 
-```
-python
+```python
 
 sequence_to_classify = "one day I will see the world"
 candidate_labels = ['travel', 'cooking', 'dancing']
@@ -27,7 +26,7 @@ Here we see that travel is the cateogry that most likely fit with the texts.
 
 Let's download the bart-large-mnli from Hugging Face:
 
-```
+```python
 from transformers import pipeline
 classifier = pipeline("zero-shot-classification",
                       model="facebook/bart-large-mnli")
@@ -36,7 +35,7 @@ classifier = pipeline("zero-shot-classification",
 
 Then lets add our data in. The example that's being used is the Amazon food reviews from kaggle and 10,000 random rows will be selected for this demonstration:
 
-```
+```python
 data = pd.read_csv("C:/Users/dkim.CENSEO/Downloads/Reviews.csv").sample(n=10000)
 data
 
@@ -44,7 +43,7 @@ data
 
 Once the data is ready, let's set up the model in Pytorch and lets start the classification:
 
-```
+```python
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import pipeline
 
