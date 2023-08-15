@@ -25,24 +25,24 @@ Here we see that travel is the cateogry that most likely fit with the texts.
 
 Let's download the bart-large-mnli from Hugging Face:
 
-'''
+```
 from transformers import pipeline
 classifier = pipeline("zero-shot-classification",
                       model="facebook/bart-large-mnli")
 
-'''
+```
 
 Then lets add our data in. The example that's being used is the Amazon food reviews from kaggle and 10,000 random rows will be selected for this demonstration:
 
-'''
+```
 data = pd.read_csv("C:/Users/dkim.CENSEO/Downloads/Reviews.csv").sample(n=10000)
 data
 
-'''
+```
 
 Once the data is ready, let's set up the model in Pytorch and lets start the classification:
 
-'''
+```
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import pipeline
 
@@ -64,7 +64,7 @@ for i in range(0, len(data), batch_size): #The batching is to make the coding mo
 
 data['classification'] = classifications 
 
-'''
+```
 
 Now print out the results and you should have your results!
 
