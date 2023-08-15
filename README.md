@@ -9,6 +9,8 @@ Zero-shot learning is a type of machine learning where instead of giving trainin
 Let's say you are looking for a certain category or specific type, such as traveling or cooking. You can create a list that contain the categories you want to look for, then the model will search through the texts to determine which category is the most likely of the ones you've chosen.
 
 ```
+python
+
 sequence_to_classify = "one day I will see the world"
 candidate_labels = ['travel', 'cooking', 'dancing']
 classifier(sequence_to_classify, candidate_labels)
