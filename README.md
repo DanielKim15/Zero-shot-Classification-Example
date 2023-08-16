@@ -20,6 +20,34 @@ classifier(sequence_to_classify, candidate_labels)
 ```
 Here we see that travel is the cateogry that most likely fit with the texts.
 
+## Pros and Cons
+
+### Pros
+
+* Flexibility and Scalability: Zero-shot learning allows the model to classify data into new classes without requiring specific training examples for those classes. This flexibility makes extending the model to handle new classes easily without retraining.
+  
+* Reduced Data Annotation: Since zero-shot learning doesn’t require labelled examples for all classes, it can significantly reduce the need for extensive data annotation, which can be expensive and time-consuming in traditional supervised learning.
+  
+* Generalization to Unseen Classes: The model can generalize to classify data not seen during training as long as relevant semantic embeddings or descriptions are provided. This makes zero-shot learning useful for applications where new classes emerge frequently.
+  
+* Cross-Domain Transfer: Zero-shot learning can effectively transfer knowledge from one domain to another, leveraging pre-trained models’ semantic understanding to classify data in a related field with minimal adaptation.
+  
+* Adaptability to Multi-Label Classification: Zero-shot learning can handle multi-label classification naturally. It can assign multiple labels to an input instance if the class descriptions allow that.
+
+### Cons
+
+*Performance Dependence on Class Descriptions: The quality and relevance of the provided class descriptions significantly impact zero-shot learning’s performance. The model might struggle to classify instances if the descriptions are inadequate or ambiguous correctly.
+
+*Limited Performance on Dissimilar Classes: Zero-shot learning might not perform as well in classes that are very different from those seen during pre-training. The model’s performance degrades for classes that lack semantic similarity with the training data.
+
+*Overfitting Risk: If the class descriptions are too specific or similar to the training data, the model might inadvertently overfit the given descriptions, leading to poorer generalization on unseen data.
+
+*Sensitivity to Input Variations: Zero-shot learning can be sensitive to slight variations in the input, as the model heavily relies on semantic embeddings and context. Small changes in the input text might lead to different predictions.
+
+*Evaluation Challenges: Measuring the performance of zero-shot learning can be challenging, as standard evaluation metrics used in supervised learning might not directly apply. Evaluating truly unseen classes can be complex and might require the careful design of evaluation protocols.
+
+
+
 ## How to get started
 
 ### Source of the NLP: Facebook
@@ -69,25 +97,5 @@ data['classification'] = classifications
 
 Now print out the results and you should have your results!
 
-# Pros and Cons
-
-## Pros
-
-* Flexibility and Scalability: Zero-shot learning allows the model to classify data into new classes without requiring specific training examples for those classes. This flexibility makes extending the model to handle new classes easily without retraining.
-  
-* Reduced Data Annotation: Since zero-shot learning doesn’t require labelled examples for all classes, it can significantly reduce the need for extensive data annotation, which can be expensive and time-consuming in traditional supervised learning.
-  
-* Generalization to Unseen Classes: The model can generalize to classify data not seen during training as long as relevant semantic embeddings or descriptions are provided. This makes zero-shot learning useful for applications where new classes emerge frequently.
-  
-* Cross-Domain Transfer: Zero-shot learning can effectively transfer knowledge from one domain to another, leveraging pre-trained models’ semantic understanding to classify data in a related field with minimal adaptation.
-  
-* Adaptability to Multi-Label Classification: Zero-shot learning can handle multi-label classification naturally. It can assign multiple labels to an input instance if the class descriptions allow that.
-
-Disadvantages
-Performance Dependence on Class Descriptions: The quality and relevance of the provided class descriptions significantly impact zero-shot learning’s performance. The model might struggle to classify instances if the descriptions are inadequate or ambiguous correctly.
-Limited Performance on Dissimilar Classes: Zero-shot learning might not perform as well in classes that are very different from those seen during pre-training. The model’s performance degrades for classes that lack semantic similarity with the training data.
-Overfitting Risk: If the class descriptions are too specific or similar to the training data, the model might inadvertently overfit the given descriptions, leading to poorer generalization on unseen data.
-Sensitivity to Input Variations: Zero-shot learning can be sensitive to slight variations in the input, as the model heavily relies on semantic embeddings and context. Small changes in the input text might lead to different predictions.
-Evaluation Challenges: Measuring the performance of zero-shot learning can be challenging, as standard evaluation metrics used in supervised learning might not directly apply. Evaluating truly unseen classes can be complex and might require the careful design of evaluation protocols.
 
 Download data from this kaggle link: https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
