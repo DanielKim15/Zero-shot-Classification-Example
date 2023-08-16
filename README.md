@@ -36,15 +36,15 @@ Here we see that travel is the cateogry that most likely fit with the texts.
 
 ### Cons
 
-*Performance Dependence on Class Descriptions: The quality and relevance of the provided class descriptions significantly impact zero-shot learning’s performance. The model might struggle to classify instances if the descriptions are inadequate or ambiguous correctly.
+* Performance Dependence on Class Descriptions: The quality and relevance of the provided class descriptions significantly impact zero-shot learning’s performance. The model might struggle to classify instances if the descriptions are inadequate or ambiguous correctly.
 
-*Limited Performance on Dissimilar Classes: Zero-shot learning might not perform as well in classes that are very different from those seen during pre-training. The model’s performance degrades for classes that lack semantic similarity with the training data.
+* Limited Performance on Dissimilar Classes: Zero-shot learning might not perform as well in classes that are very different from those seen during pre-training. The model’s performance degrades for classes that lack semantic similarity with the training data.
 
-*Overfitting Risk: If the class descriptions are too specific or similar to the training data, the model might inadvertently overfit the given descriptions, leading to poorer generalization on unseen data.
+* Overfitting Risk: If the class descriptions are too specific or similar to the training data, the model might inadvertently overfit the given descriptions, leading to poorer generalization on unseen data.
 
-*Sensitivity to Input Variations: Zero-shot learning can be sensitive to slight variations in the input, as the model heavily relies on semantic embeddings and context. Small changes in the input text might lead to different predictions.
+* Sensitivity to Input Variations: Zero-shot learning can be sensitive to slight variations in the input, as the model heavily relies on semantic embeddings and context. Small changes in the input text might lead to different predictions.
 
-*Evaluation Challenges: Measuring the performance of zero-shot learning can be challenging, as standard evaluation metrics used in supervised learning might not directly apply. Evaluating truly unseen classes can be complex and might require the careful design of evaluation protocols.
+* Evaluation Challenges: Measuring the performance of zero-shot learning can be challenging, as standard evaluation metrics used in supervised learning might not directly apply. Evaluating truly unseen classes can be complex and might require the careful design of evaluation protocols.
 
 
 
